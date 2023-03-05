@@ -1,0 +1,7 @@
+ansible==7.3.0
+ansible-lint==6.13.0
+molecule[docker]==4.0.4
+pytest-testinfra==7.0.0
+flake8
+black
+isort

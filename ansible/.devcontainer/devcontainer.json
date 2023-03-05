@@ -1,0 +1,28 @@
+{
+  "name": "dev-container",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "ansible",
+  "workspaceFolder": "/root/workstation",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.ansible",
+        "ms-python.python"
+      ],
+      "settings": {
+        "python.formatting.provider": "black",
+        "[python]": {
+          "editor.defaultFormatter": null,
+          "editor.formatOnSave": false
+        },
+        "files.associations": {
+          "*.yml": "ansible",
+          "docker-compose*.yml": "dockercompose"
+        }
+      }
+    }
+  },
+  "shutdownAction": "stopCompose"
+}

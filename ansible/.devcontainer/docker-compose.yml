@@ -1,0 +1,11 @@
+---
+version: "3"
+
+services:
+  ansible:
+    build: .
+    command: /bin/bash
+    volumes:
+      - ../:/root/workstation
+      - /var/run/docker.sock:/var/run/docker.sock
+    tty: true
