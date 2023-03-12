@@ -1,0 +1,15 @@
+---
+- name: Break loop sample
+  hosts: localhost
+  tasks:
+    - name: Break loop
+      ansible.builtin.debug:
+        msg: "{{ item }}"
+      loop:
+        - not target
+        - not target
+        - target
+        - not target
+        - not target
+      register: _res
+      when: (_res.item | default("not target")) != "target"
